@@ -1,0 +1,8 @@
+repos:
+-   repo: git@github.com:deployed/pre_ticket.git
+    rev: v1.0.0
+    hooks:
+    - id:  pre_ticket
+      language_version: python3.6
+      stages: [commit-msg]
+#      args: ['--regex=""', '--format={ticket} - ']  # Optional
