@@ -5,4 +5,4 @@ repos:
     - id:  pre_ticket
       language_version: python3.6
       stages: [commit-msg]
-#      args: ['--regex=""', '--format={ticket} - ']  # Optional
+#      args: ['--regex=(feature|bug|chore)/(?P<ticket>[0-9]+)-.*', '--format={ticket} - {message}']  # Optional
