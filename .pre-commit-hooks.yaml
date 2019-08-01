@@ -1,0 +1,5 @@
+- id: pre_ticket
+  name: pre_ticket
+  entry: pre_ticket
+  language: python
+  description: pre-commit hook for adding issue ticket number to your git commit messages
