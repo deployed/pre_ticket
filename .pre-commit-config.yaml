@@ -1,5 +1,5 @@
 repos:
--   repo: git@github.com:deployed/pre_ticket.git
+-   repo: https://github.com/deployed/pre_ticket
     rev: v1.0.0
     hooks:
     - id:  pre_ticket

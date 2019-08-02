@@ -10,7 +10,7 @@ Next, add config file: `.pre-commit-config.yaml` to your project directory if yo
 
 ```yaml
 repos:
--   repo: git@github.com:deployed/pre_ticket.git
+-   repo: https://github.com/deployed/pre_ticket
     rev: v1.0.0
     hooks:
     - id:  pre_ticket
@@ -18,7 +18,7 @@ repos:
       stages: [commit-msg]
 ```
 
-In your project dir run `$ pre-commit install` and that's it. You are good to go.
+In your project dir run `$ pre-commit install --hook-type commit-msg` and that's it. You are good to go.
 
 ## Default settings and options
 
@@ -31,7 +31,7 @@ You can change the regex pattern, by adding the args param to the pre-commit con
 
 ```yaml
 repos:
--   repo: git@github.com:deployed/pre_ticket.git
+-   repo: https://github.com/deployed/pre_ticket
     rev: v1.0.0
     hooks:
     - id:  pre_ticket
@@ -44,7 +44,7 @@ By default the ticket number is added under the commit message as `Ref: #123456`
 
 ```yaml
 repos:
--   repo: git@github.com:deployed/pre_ticket.git
+-   repo: https://github.com/deployed/pre_ticket
     rev: v1.0.0
     hooks:
     - id:  pre_ticket
