@@ -36,7 +36,10 @@ def add_ticket_number(filename, regex, format_template):
         with io.open(filename, "r+") as fd:
             contents = fd.read()
 
-            if is_ticket_in_message(contents, ticket_number):
+            if (
+                is_ticket_in_message(contents, ticket_number)
+                or not contents[:contents.find("\n")]
+            ):
                 return
 
             ticket_msg = format_template.format(message=contents, ticket=ticket_number)
