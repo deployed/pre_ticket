@@ -5,9 +5,7 @@ import six
 
 from .commands import call_command
 
-GIT_COMMENT_SECTION_LINE = (
-    "# ------------------------ >8 ------------------------\n"
-)
+GIT_COMMENT_SECTION_LINE = r". -{24} >8 -{24}\n"
 
 
 def get_current_branch():
@@ -39,8 +37,9 @@ def get_message_without_comment_section(message):
     strip it to avoid appending of ticket number bellow this line.
 
     """
-    if GIT_COMMENT_SECTION_LINE in message:
-        return message[:message.find(GIT_COMMENT_SECTION_LINE)]
+    match = re.search(GIT_COMMENT_SECTION_LINE, message)
+    if match is not None:
+        return message[:match.start()]
     return message
 
 
