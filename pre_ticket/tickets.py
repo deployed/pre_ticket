@@ -24,7 +24,7 @@ def is_ticket_in_message(contents, ticket):
         if stripped == "" or stripped.startswith("#"):
             continue
 
-        if ticket in stripped:
+        if ticket.lower() in stripped:
             return True
 
 
